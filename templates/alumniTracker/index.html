@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block navbar %}
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{% url 'homepage' %}"> Alumni Tracker </a>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'login' %}">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'register' %}">Register</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+{% endblock %}
+
+{% block content %}
+  <div class="text-center">
+    <h2> Welcome to Alumni Tracker. </h2>
+    <h4> Want to catch up with your old friends and seniors?</h4>
+    <h4> Just Signup today and get started! </h4>
+    <p></p>
+    
+    <div class="col">
+    <p> Already a user? <a href="{% url 'login' %}"> Login </a></p>
+
+</div>
+    <p> New user? <a href="{% url 'register' %}"> Register </a></p>
+  </div>
+{% endblock %}

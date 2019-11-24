@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block navbar %}
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{% url 'homepage' %}"> Alumni Tracker </a>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'addpost' %}">  Post </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'logout' %}"> Logout </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+{% endblock %}
+
+{% block content %}
+  <ul>
+    {% for post in posts %}
+      <li>
+        Post: {{ post.post }}
+        Posted on:{{post.date}}
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
+
+
